@@ -9,7 +9,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\termoAula\TermoLib.csproj" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TermoLib\TermoLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Efeitos Sonoros\keypresssoundeffect.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Efeitos Sonoros\mouseclick.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Efeitos Sonoros\mouseclickclose.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

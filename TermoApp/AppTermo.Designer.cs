@@ -35,6 +35,8 @@
             panelKeyb3 = new Panel();
             buttonDel = new Button();
             buttonEnter = new Button();
+            buttonConfig = new Button();
+            buttonReset = new Button();
             SuspendLayout();
             // 
             // panelBtn
@@ -48,7 +50,7 @@
             // 
             labelTitulo.AutoSize = true;
             labelTitulo.Font = new Font("JetBrains Mono Medium", 28.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelTitulo.ForeColor = SystemColors.ActiveCaptionText;
+            labelTitulo.ForeColor = Color.White;
             labelTitulo.Location = new Point(313, 46);
             labelTitulo.Name = "labelTitulo";
             labelTitulo.Size = new Size(172, 62);
@@ -79,9 +81,10 @@
             // buttonDel
             // 
             buttonDel.BackColor = Color.LightSteelBlue;
-            buttonDel.Font = new Font("JetBrains Mono Medium", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonDel.Font = new Font("JetBrains Mono Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonDel.Location = new Point(651, 655);
             buttonDel.Name = "buttonDel";
+            buttonDel.Padding = new Padding(3, 0, 0, 0);
             buttonDel.RightToLeft = RightToLeft.No;
             buttonDel.Size = new Size(52, 52);
             buttonDel.TabIndex = 5;
@@ -102,12 +105,42 @@
             buttonEnter.UseVisualStyleBackColor = false;
             buttonEnter.Click += buttonEnter_Click;
             // 
+            // buttonConfig
+            // 
+            buttonConfig.BackColor = Color.LightSteelBlue;
+            buttonConfig.Font = new Font("JetBrains Mono Medium", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonConfig.Location = new Point(651, 46);
+            buttonConfig.Name = "buttonConfig";
+            buttonConfig.Padding = new Padding(4, 0, 0, 1);
+            buttonConfig.RightToLeft = RightToLeft.No;
+            buttonConfig.Size = new Size(52, 52);
+            buttonConfig.TabIndex = 7;
+            buttonConfig.Text = "🌣";
+            buttonConfig.UseVisualStyleBackColor = false;
+            buttonConfig.Click += buttonConfig_Click;
+            // 
+            // buttonReset
+            // 
+            buttonReset.BackColor = Color.LightSteelBlue;
+            buttonReset.Font = new Font("JetBrains Mono Medium", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonReset.Location = new Point(651, 125);
+            buttonReset.Name = "buttonReset";
+            buttonReset.Padding = new Padding(5, 0, 0, 3);
+            buttonReset.RightToLeft = RightToLeft.No;
+            buttonReset.Size = new Size(52, 52);
+            buttonReset.TabIndex = 8;
+            buttonReset.Text = "⟳";
+            buttonReset.UseVisualStyleBackColor = false;
+            buttonReset.Click += buttonReset_Click;
+            // 
             // AppTermo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateGray;
             ClientSize = new Size(800, 843);
+            Controls.Add(buttonReset);
+            Controls.Add(buttonConfig);
             Controls.Add(buttonEnter);
             Controls.Add(buttonDel);
             Controls.Add(panelKeyb3);
@@ -118,6 +151,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "AppTermo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
@@ -132,5 +166,7 @@
         private Panel panelKeyb3;
         private Button buttonDel;
         private Button buttonEnter;
+        private Button buttonConfig;
+        private Button buttonReset;
     }
 }
